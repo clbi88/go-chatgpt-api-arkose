@@ -1,0 +1,17 @@
+services:
+  go-chatgpt-api:
+    build: .
+    container_name: go-chatgpt-api
+    image: linweiyuan/go-chatgpt-api
+    ports:
+      - 8080:8080
+    environment:
+      - TZ=Asia/Shanghai
+      - PROXY=
+      - ARKOSE_TOKEN_URL=
+      - BX=
+      - BX_URL=
+      - OPENAI_EMAIL=
+      - OPENAI_PASSWORD=
+      - CONTINUE_SIGNAL=
+    restart: unless-stopped
